@@ -1,0 +1,32 @@
+Introduction:-
+This project aims to do real-time object detection through a laptop camera or webcam using OpenCV and MobileNetSSD. The idea is to loop over each frame of the video stream, detect objects like person, chair, dog, etc. and bound each detection in a box. Here, we will go through the steps required for setting up the project and some explanation about the code.
+
+
+install below libraries by opening command prompt inside this path
+cd Real-Time-Object-Detection-With-OpenCV
+
+pip install opencv-python
+pip install opencv-contrib-python
+pip install opencv-python-headless
+pip install opencv-contrib-python-headless
+pip install matplotlib
+pip install imutils
+
+run the code by below command
+python real_time_object_detection1.py --prototxt MobileNetSSD_deploy.prototxt.txt --model MobileNetSSD_deploy.caffemodel
+
+
+MobileNetSSD_deploy.caffemodel  why ?
+
+The `MobileNetSSD_deploy.caffemodel` is a pre-trained object detection model optimized for real-time applications on devices with limited resources. 
+
+### Key Points:
+- **MobileNet**: A lightweight neural network designed by Google for mobile and embedded vision applications.
+- **SSD**: An object detection framework that detects objects in a single forward pass, enabling faster real-time detection.
+- **Pre-trained Model**: Contains pre-learned weights for detecting common objects like people and cars, trained using the Caffe framework.
+- **Why Use It**: It's efficient, accurate, pre-trained on common objects, and ready for deployment in real-time applications.
+
+
+MobileNetSSD_deploy.prototxt
+
+The `MobileNetSSD_deploy.prototxt` file defines the architecture of the MobileNet SSD neural network used for object detection. It specifies the layers, configurations, and connections of the network. This file is crucial because it tells the framework how to construct and process the model using the pre-trained weights in the `MobileNetSSD_deploy.caffemodel` file, enabling accurate and efficient object detection during deployment.
